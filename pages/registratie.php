@@ -1,5 +1,5 @@
 <?php
-include '../database/dbCon.php';
+include '../database/dbcon.php';
 
 $errors = [];
 
@@ -45,7 +45,7 @@ if (isset($_POST['registreer'])) {
         $stmt->bind_param("ssss", $gebruikersnaam, $email, $hashed_wachtwoord, $geboortedatum);
         
         if ($stmt->execute()) {
-            header("Location: login.php");
+            header("Location: ../index.php");
             exit();
         } else {
             $errors[] = "Registratie mislukt. Probeer het opnieuw.";

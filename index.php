@@ -1,6 +1,7 @@
 <?php 
 
-include "../database/data.php";
+include "database/data.php";
+include "database/dbcon.php";
 
 if (!isset($_SESSION['ingelogde_gebruiker'])) {
     header("Location: login.php");
@@ -16,24 +17,24 @@ if (!isset($_SESSION['ingelogde_gebruiker'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casino - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="../images/logo.png">
+    <link rel="shortcut icon" href="images/logo.png">
 </head>
 <body class="bg-black text-white min-h-screen font-mono" style="font-family: 'Andale Mono', monospace;">
     <nav class="bg-gray-900 border-b-2 border-white">
         <div class="container flex flex-wrap items-center justify-between mx-auto p-4">
             <!-- Logo -->
-            <a href="home.php" class="flex items-center space-x-3 order-1 ml-6">
-                <img src="../images/logo.png" class="h-20" alt="Casino Logo" />
+            <a href="index.php" class="flex items-center space-x-3 order-1 ml-6">
+                <img src="images/logo.png" class="h-20" alt="Casino Logo" />
             </a>
 
             <!-- Navbar Links -->
             <div class="hidden items-center justify-between w-full md:flex md:w-auto order-3 md:order-2 ml-12 pl-12" id="navbar-user">
                 <ul class="flex flex-col font-medium p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-gray-900 dark:bg-gray-900 dark:border-gray-700">
                     <li>
-                        <a href="roulette.php" class="block py-2 px-3 text-gray-300 hover:text-white rounded md:p-0">Roulette</a>
+                        <a href="pages/roulette.php" class="block py-2 px-3 text-gray-300 hover:text-white rounded md:p-0">Roulette</a>
                     </li>
                     <li>
-                        <a href="blackjack.php" class="block py-2 px-3 text-gray-300 hover:text-white rounded md:p-0">Blackjack</a>
+                        <a href="pages/blackjack.php" class="block py-2 px-3 text-gray-300 hover:text-white rounded md:p-0">Blackjack</a>
                     </li>
                 </ul>
             </div>
@@ -44,8 +45,8 @@ if (!isset($_SESSION['ingelogde_gebruiker'])) {
                 <span class="text-gray-300">€<?php echo $saldo; ?></span>
 
                 <!-- User Avatar -->
-                <a href="profiel.php" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300" id="user-menu-button">
-                    <img class="w-16 h-16 rounded-full hover:border hover:border-white hover:p-1" src="../images/profiel_foto.png" alt="User Photo">
+                <a href="pages/profiel.php" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300" id="user-menu-button">
+                    <img class="w-16 h-16 rounded-full hover:border hover:border-white hover:p-1" src="images/profiel_foto.png" alt="User Photo">
                 </a>
 
                 <!-- menu button -->
@@ -57,7 +58,7 @@ if (!isset($_SESSION['ingelogde_gebruiker'])) {
 
                 <!-- Logout Button Container -->
                 <div class="flex items-center justify-center h-full">
-                    <a href="../logicFiles/logout.php" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-500 transition">Logout</a>
+                    <a href="logicFiles/logout.php" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-500 transition">Logout</a>
                 </div>
             </div>
         </div>
@@ -80,9 +81,9 @@ if (!isset($_SESSION['ingelogde_gebruiker'])) {
 
             <!-- Game Options -->
             <div class="flex justify-center space-x-6">
-                <a href="roulette.php" class="bg-black border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition">Roulette</a>
-                <a href="blackjack.php" class="bg-black border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition">Blackjack</a>
-                <a href="geld_toevoegen.php" class="bg-green-600 text-white px-6 py-3 border border-white rounded-lg hover:bg-green-500 transition">Geld bijschrijven</a>
+                <a href="pages/roulette.php" class="bg-black border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition">Roulette</a>
+                <a href="pages/blackjack.php" class="bg-black border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition">Blackjack</a>
+                <a href="pages/geld_toevoegen.php" class="bg-green-600 text-white px-6 py-3 border border-white rounded-lg hover:bg-green-500 transition">Geld bijschrijven</a>
             </div>
         </div>
     </div>

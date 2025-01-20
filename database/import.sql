@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS `Svens_casino`;
-CREATE DATABASE `Svens_casino`;
-USE `Svens_casino`;
+DROP DATABASE IF EXISTS `casino`;
+CREATE DATABASE `casino`;
+USE `casino`;
 
 CREATE TABLE `gebruikers` (
     `gebruiker_id` INT AUTO_INCREMENT PRIMARY KEY,

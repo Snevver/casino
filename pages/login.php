@@ -30,7 +30,7 @@ if (isset($_POST['login'])) {
             $_SESSION['ingelogde_gebruiker'] = $user_data['gebruiker_id'];
 
             // Redirect de gebruiker naar de home pagina
-            header("Location: home.php"); 
+            header("Location: ../index.php"); 
             exit();
         } else {  
             // Als het wachtwoord niet overeenkomt met het wachtwoord wat bij de username hoort in de database

@@ -23,7 +23,7 @@ if (!isset($_SESSION['ingelogde_gebruiker'])) {
     <nav class="bg-gray-900 border-b-2 border-white">
         <div class="container flex flex-wrap items-center justify-between mx-auto p-4">
             <!-- Logo -->
-            <a href="home.php" class="flex items-center space-x-3 order-1 ml-6">
+            <a href="../index.php" class="flex items-center space-x-3 order-1 ml-6">
                 <img src="../images/logo.png" class="h-20" alt="Casino Logo" />
             </a>
 
