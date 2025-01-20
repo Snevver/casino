@@ -3,7 +3,7 @@
 $host = "localhost";
 $username = "bit_academy";
 $password = "bit_academy";
-$database = "svens_casino";
+$database = "casino";
 
 $con = mysqli_connect($host, $username, $password, $database);
 
